@@ -1,0 +1,37 @@
+if game.PlaceId == 2788229376 then
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Dahood", "DarkTheme")
+local Tab = Window:NewTab("Aimcock")
+local Section = Tab:NewSection("Lock")
+
+Section:NewButton("Lock ain't done yet", "Trace people aka Lock onto them", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/micropen/Aimlock/main/Lock"))
+end)
+
+local Tab = Window:NewTab("Fun")
+local Section = Tab:NewSection("Fun shit")
+Section:NewButton("Headless CS", "ClienSided Headless", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Invooker11/Koblox-and-Headless/main/Headless", true))()
+end)
+
+Section:NewButton("Korblox CS", "ClientSided Korblox", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Invooker11/Koblox-and-Headless/main/Right%20Leg", true))() 
+end)
+
+Section:NewButton("Animation", "Tryhard Animation", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/micropen/mocmsomdf/main/Animation", true))() 
+end)
+
+Section:NewButton("Esp","See everyone", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/micropen/Esp/main/EspDahood"))
+end)
+
+Section:NewSlider("Walking Speed", "Speed", 250, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+Section:NewKeybind("v", "Hide the GUI", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
+
+
+end
